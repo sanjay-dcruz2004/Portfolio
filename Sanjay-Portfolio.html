@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Interactive Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <style>
+      @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+      }
+      .animate-float {
+        animation: float 3s ease-in-out infinite;
+      }
+      @keyframes fadeInUp {
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .animate-fade-in-up {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 1s ease-out forwards;
+      }
+      @keyframes gradientShift {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+      .animate-gradient {
+        background-size: 300% 300%;
+        animation: gradientShift 10s ease infinite;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-900 text-white font-sans">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-gray-800 shadow-md fixed top-0 w-full z-50 transition-all duration-300">
+
+      <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+        <div class="flex items-center space-x-2 cursor-pointer hover:scale-110 transition-transform duration-300">
+          <div class="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 text-white flex items-center justify-center text-2xl font-bold rounded-full shadow-lg animate-bounce">S</div>
+          <span class="font-semibold text-xl text-white">Sanjay Dcruz</span>
+
+        </div>
+        <div class="space-x-6 hidden md:flex">
+          <a href="#home" class="nav-link">Home</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#experience" class="nav-link">Experience</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex flex-col md:flex-row justify-center items-center text-white pt-28 px-6 md:px-20 overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <div class="w-full h-full animate-gradient bg-gradient-to-r from-purple-800 via-blue-500 to-indigo-700 opacity-90"></div>
+      </div>
+      <div class="flex-1 text-center md:text-left mb-10 md:mb-0 animate-fade-in-up z-10">
+        <h1 class="text-5xl font-bold mb-4">Hi, I'm <span class="text-yellow-300" id="typing">Sanjay Dcruz</span></h1>
+        <h2 class="text-2xl mb-6">BCA Graduate | Java | Python | MySQL</h2>
+        <a href="#projects" class="mt-4 inline-block px-6 py-3 bg-white text-blue-500 font-bold rounded-full hover:bg-yellow-300 transition duration-300 shadow-lg">View My Work</a>
+      </div>
+      <div class="flex-1 flex justify-center z-10 animate-float">
+        <img src="https://imgs.search.brave.com/_Fv_XFQD-0Pw_uGg6z_jh6qQ92HbjHgGHaoXBZDD0dE/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cHJvZC53ZWJzaXRl/LWZpbGVzLmNvbS81/ZmE2MWNiYmYwZDQz/MmIzMjMwZjYyYjEv/NjZkMTRlMzEwODY0/OGNjNTZiMDFkZTI2/X3NraWxscy10b29s/cy1qYXZhLWZ1bGwt/c3RhY2staWxsdXN0/YXJ0aW9uLmF2aWY" alt="PC Illustration" class="w-80 h-auto drop-shadow-2xl transform hover:scale-105 transition duration-500">
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 text-white relative overflow-hidden">
+      <div class="absolute inset-0 animate-gradient bg-gradient-to-r from-purple-800 via-blue-500 to-indigo-700 opacity-90 z-0"></div>
+      <div class="relative z-10 text-center">
+        <h2 class="text-4xl font-bold mb-10 animate-fade-in-up">About Me</h2>
+        <div class="flex flex-col md:flex-row items-center justify-center max-w-5xl mx-auto px-4 space-y-10 md:space-y-0 md:space-x-12">
+          <div class="w-48 h-48 md:w-60 md:h-60 rounded-full overflow-hidden shadow-2xl transform hover:scale-105 transition duration-500">
+            <img src="C:\Users\sanja\OneDrive\Desktop\college\Sanjay\dalle\PHOTO\WhatsApp Image 2024-04-22 at 18.15.57_e9aaa35e.jpg" alt="Profile Picture" class="w-full h-full object-cover" />
+          </div>
+          <div class="text-left max-w-xl animate-fade-in-up">
+            <p class="text-lg leading-relaxed">
+               I'm a BCA graduate from St. Aloysius College, passionate about programming and problem-solving. Skilled in 
+              <span class="font-semibold text-yellow-300">Java</span>, 
+              <span class="font-semibold text-yellow-300">Python</span>,  
+              <span class="font-semibold text-yellow-300">MySQL</span>,
+              <span class="font-semibold text-yellow-300">JavaScript</span>and
+              <span class="font-semibold text-yellow-300">Node.js</span>.
+            </p>
+            <p class="mt-4 text-lg leading-relaxed">
+            I enjoy building real-world solutions—from interactive websites to data-driven applications.
+
+Beyond tech, I'm actively involved in sports like cricket, badminton, and softball. These experiences have shaped me into a disciplined, collaborative, and goal-oriented individual. Balancing academics and athletics has taught me the value of time management, teamwork, and resilience.
+
+I’m now looking forward to applying my technical knowledge and soft skills in a professional setting where I can grow, contribute, and create impact.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   <!-- Experience Section -->
+<section id="experience" class="py-20 text-white relative overflow-hidden">
+  <div class="absolute inset-0 animate-gradient bg-gradient-to-r from-purple-800 via-blue-500 to-indigo-700 opacity-90 z-0"></div>
+  <div class="relative z-10 text-center">
+    <h2 class="text-4xl font-bold mb-12 animate-fade-in-up">Experience</h2>
+
+    <div class="max-w-6xl mx-auto flex flex-wrap justify-center gap-8">
+
+      <!-- Experience Card 1 -->
+      <div class="bg-white text-gray-900 w-80 rounded-xl shadow-xl p-5 flex flex-col items-center text-center space-y-3">
+        <img src="https://media.licdn.com/dms/image/v2/D560BAQHxdKolSDS3HQ/company-logo_200_200/company-logo_200_200/0/1736982746290/prism_cloud_consulting_inc_logo?e=1752710400&v=beta&t=LPrh1fMx1lFv-qHhD4xJ_RbV-WNFvlVZnqGLIzzA_1Q" alt="Prism Logo" />
+        <div>
+          <h3 class="text-xl font-semibold">Intern</h3>
+          <h3 class="text-xl font-semibold text-blue-500">Prism Cloud Consulting Inc</h3>
+          <h3 class="text-xl font-semibold">UI/UX Designer</h3>
+          <p class="text-sm text-gray-600">May 2024 - July 2024</p>
+        </div>
+        <button onclick="openModal('modal1')" class="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-medium py-1 px-4 rounded-lg transition">Read More</button>
+      </div>
+
+      <!-- Experience Card 2 -->
+      <div class="bg-white text-gray-900 w-80 rounded-xl shadow-xl p-5 flex flex-col items-center text-center space-y-3">
+        <img src="https://media.licdn.com/dms/image/v2/C4D0BAQGZE7MKZVD0eA/company-logo_200_200/company-logo_200_200/0/1641195529061/indian_institution_of_digital_education_logo?e=1752710400&v=beta&t=JcUVcb-0szE7IvIU5aEN7i2XojWmydTt4jbBU028MvI" alt="IIDE Logo"/>
+        <div>
+          <h3 class="text-xl font-semibold">Intern</h3>
+          <h3 class="text-xl font-semibold text-blue-500">IIDE - The Digital School</h3>
+          <h3 class="text-xl font-semibold">Digital Marketing</h3>
+          <p class="text-sm text-gray-600">Aug 2024 - Sep 2024</p>
+        </div>
+        <button onclick="openModal('modal2')" class="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-medium py-1 px-4 rounded-lg transition">Read More</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Modal Template -->
+<div id="modal1" class="fixed inset-0 z-50 hidden bg-black bg-opacity-50 flex items-center justify-center">
+  <div class="bg-white text-gray-900 w-full max-w-xl p-6 rounded-lg shadow-lg relative">
+    <button onclick="closeModal('modal1')" class="absolute top-2 right-2 text-xl text-gray-600 hover:text-red-500">&times;</button>
+    <h3 class="text-2xl font-bold mb-2">Intern - Prism Cloud Computing Inc - UI/UX Designer</h3>
+    <p class="text-sm text-gray-600 mb-4">May 2024 - July 2024</p>
+    <ul class="list-disc list-inside space-y-2">
+      <li>Designed and developed web pages using Figma</li>
+      <li>Created multiple landing pages.</li>
+      <li>Collaborated with the frontend team for integration.</li>
+    </ul>
+  </div>
+</div>
+
+<div id="modal2" class="fixed inset-0 z-50 hidden bg-black bg-opacity-50 flex items-center justify-center">
+  <div class="bg-white text-gray-900 w-full max-w-xl p-6 rounded-lg shadow-lg relative">
+    <button onclick="closeModal('modal2')" class="absolute top-2 right-2 text-xl text-gray-600 hover:text-red-500">&times;</button>
+    <h3 class="text-2xl font-bold mb-2">Intern - IIDE - Digital Marketing</h3>
+    <p class="text-sm text-gray-600 mb-4">Aug 2024 - Sep 2024</p>
+    <ul class="list-disc list-inside space-y-2">
+      <li>Used marketing tools like excel to manipulate and store data's.</li>
+      <li>Went to various companies for survey.</li>
+      <li>Learnt to use social media platform better.</li>
+      <li>Communicated directly with clients to gather feedback and deliver improvements.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Modal Script -->
+<script>
+  function openModal(id) {
+    document.getElementById(id).classList.remove('hidden');
+  }
+
+  function closeModal(id) {
+    document.getElementById(id).classList.add('hidden');
+  }
+</script>
+
+
+    <!-- Skills Section -->
+<section id="skills" class="py-20 text-white relative overflow-hidden">
+  <div class="absolute inset-0 animate-gradient bg-gradient-to-r from-purple-800 via-blue-500 to-indigo-700 opacity-90 z-0"></div>
+  <div class="relative z-10 text-center max-w-6xl mx-auto px-4">
+    <h2 class="text-4xl font-bold mb-12 animate-fade-in-up">Skills</h2>
+
+    <!-- Scrolling Wrapper -->
+    <div class="overflow-hidden relative">
+      <div class="flex space-x-6 animate-marquee whitespace-nowrap">
+
+        <!-- Skill Items (Duplicated for seamless looping) -->
+        <!-- Wrap this chunk twice for infinite scroll -->
+        <template id="skills-template">
+          <div class="backdrop-blur-md bg-white/20 text-white p-4 px-6 rounded-xl shadow-md flex items-center space-x-3 min-w-[200px]">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" class="w-8 h-8" alt="Java" />
+            <span class="font-semibold text-lg">Java</span>
+          </div>
+
+          <div class="backdrop-blur-md bg-white/20 text-white p-4 px-6 rounded-xl shadow-md flex items-center space-x-3 min-w-[200px]">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="w-8 h-8" alt="Python" />
+            <span class="font-semibold text-lg">Python</span>
+          </div>
+
+          <div class="backdrop-blur-md bg-white/20 text-white p-4 px-6 rounded-xl shadow-md flex items-center space-x-3 min-w-[200px]">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="w-8 h-8" alt="MySQL" />
+            <span class="font-semibold text-lg">MySQL</span>
+          </div>
+
+          <div class="backdrop-blur-md bg-white/20 text-white p-4 px-6 rounded-xl shadow-md flex items-center space-x-3 min-w-[200px]">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="w-8 h-8" alt="HTML" />
+            <span class="font-semibold text-lg">HTML</span>
+          </div>
+
+          <div class="backdrop-blur-md bg-white/20 text-white p-4 px-6 rounded-xl shadow-md flex items-center space-x-3 min-w-[200px]">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="w-8 h-8" alt="CSS" />
+            <span class="font-semibold text-lg">CSS</span>
+          </div>
+
+          <div class="backdrop-blur-md bg-white/20 text-white p-4 px-6 rounded-xl shadow-md flex items-center space-x-3 min-w-[200px]">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-8 h-8" alt="JavaScript" />
+            <span class="font-semibold text-lg">JavaScript</span>
+          </div>
+
+          <div class="backdrop-blur-md bg-white/20 text-white p-4 px-6 rounded-xl shadow-md flex items-center space-x-3 min-w-[200px]">
+            <img src="https://imgs.search.brave.com/Z5KzvnbDLcIM0PWp7CcoTA7Rp3go5U8SMilVC0FGycQ/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy9k/L2Q1L1RhaWx3aW5k/X0NTU19Mb2dvLnN2/Zw" class="w-8 h-8" alt="Tailwind CSS" />
+            <span class="font-semibold text-lg">Tailwind CSS</span>
+          </div>
+          <div class="backdrop-blur-md bg-white/20 text-white p-4 px-6 rounded-xl shadow-md flex items-center space-x-3 min-w-[200px]">
+            <img src="https://imgs.search.brave.com/tf2BA90UwZVLAaW_IwiuHkwwxkGEGmHSt9RyjpeR4xk/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMuc3RpY2twbmcu/Y29tL2ltYWdlcy82/MmE3NTI2MTIyMzM0/M2ZiYzIyMDdkMDku/cG5n" class="w-8 h-8" alt="Tailwind CSS" />
+            <span class="font-semibold text-lg">Nodejs</span>
+          </div>
+        </template>
+
+        <!-- Render skills twice for smooth infinite scroll -->
+        <script>
+          const container = document.querySelector('.animate-marquee');
+          const skills = document.getElementById('skills-template').content;
+          container.append(skills.cloneNode(true));
+          container.append(skills.cloneNode(true));
+        </script>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Tailwind Animation -->
+<style>
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .animate-marquee {
+    animation: marquee 40s linear infinite;
+  }
+</style>
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 text-white relative overflow-hidden">
+    <div class="absolute inset-0 animate-gradient bg-gradient-to-r from-purple-800 via-blue-500 to-indigo-700 opacity-90 z-0"></div>
+    <div class="relative z-10 text-center max-w-5xl mx-auto px-4">
+        <h2 class="text-4xl font-bold mb-10 animate-fade-in-up">Projects</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white text-gray-900 p-6 rounded-lg shadow-lg hover:scale-105 transform transition duration-300">
+            <h3 class="text-xl font-semibold mb-2">Student Management System</h3>
+            <p>A Java and MySQL app for managing student data efficiently.</p>
+        </div>
+        <div class="bg-white text-gray-900 p-6 rounded-lg shadow-lg hover:scale-105 transform transition duration-300">
+            <h3 class="text-xl font-semibold mb-2">Data Analyzer</h3>
+            <p>Python tool for processing and visualizing CSV data.</p>
+        </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 text-white relative overflow-hidden">
+    <div class="absolute inset-0 animate-gradient bg-gradient-to-r from-purple-800 via-blue-500 to-indigo-700 opacity-90 z-0"></div>
+    <div class="relative z-10 text-center max-w-5xl mx-auto px-4">
+        <h2 class="text-4xl font-bold mb-10 animate-fade-in-up">Contact Me</h2>
+        <form class="space-y-4">
+        <input type="text" placeholder="Your Name" class="w-full p-3 border border-gray-300 rounded text-gray-900" required />
+        <input type="email" placeholder="Your Email" class="w-full p-3 border border-gray-300 rounded text-gray-900" required />
+        <textarea placeholder="Your Message" class="w-full p-3 border border-gray-300 rounded text-gray-900" rows="5" required></textarea>
+        <button type="submit" class="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 transition">Send</button>
+        </form>
+    </div>
+    </section>
+
+
+
+    <!-- Footer -->
+<footer class="bg-white text-gray-800 py-6 shadow-inner relative z-10">
+  <div class="max-w-5xl mx-auto px-4 text-center">
+    <p class="text-sm md:text-base">&copy; 2025 Sanjay Dcruz. All rights reserved.</p>
+    <div class="flex justify-center space-x-4 mt-3">
+      <a href="#home" class="hover:text-blue-500 transition">Home</a>
+      <a href="#about" class="hover:text-blue-500 transition">About</a>
+      <a href="#projects" class="hover:text-blue-500 transition">Projects</a>
+      <a href="#contact" class="hover:text-blue-500 transition">Contact</a>
+    </div>
+  </div>
+</footer>
+
+
+    <script>
+      var typed = new Typed('#typing', {
+        strings: ["BCA Graduate", "Fullstack Developer", "Python Enthusiast", "UI/UX Designer"],
+        typeSpeed: 50,
+        backSpeed: 50,
+        loop: true
+      });
+      ScrollReveal().reveal('section', { delay: 200, distance: '50px', origin: 'top', duration: 2000 });
+    </script>
+  </body>
+</html>
